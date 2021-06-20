@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+            crossorigin="anonymous">
+        <meta name="description" content="An easy way to find your lifelong companion">
+        <meta name="robots" content="index,follow">
+        <link href="{{url_for('static', filename='form.css')}}" rel="stylesheet">
+        <link rel="icon" href="{{url_for('static', filename='images/dogPrint.ico')}}">
+        <title>Fluffy Friend Finder | Find Your Lifelong Companion</title>
+    </head>
+    <body>
+        <header>
+            <div id=logo>
+                <a href="/"><img src="{{url_for('static', filename='images/mainLogoClear.png')}}" id="website-logo"></a>
+            </div>
+        </header>
+        <div class="form">
+            <form method="POST">
+            <div class="side1">
+                <p>What type of pets are you looking for?</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="rtype" id="q1o1" value="dog" onclick="onPetChange()" required>
+                    <label class="form-check-label" for="q1o1">
+                    Dogs
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="rtype" id="q1o2" value="cat" onclick="onPetChange()">
+                    <label class="form-check-label" for="q1o2">
+                    Cats
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="rtype" id="q1o3" value="rabbit" onclick="onPetChange()">
+                    <label class="form-check-label" for="q1o3">
+                    Rabbits
+                    </label>
+                </div>
+                <br>
+                <p>What is the maximum distance? (max 500)</p>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <input type="number" name="distance" class="form-control" required>
+                            <span class="input-group-text">miles</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                    </div>
+                </div>
+                <br>
+                <p>What size of pets are you looking for?</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="small" name="csize" id="q2o1">
+                    <label class="form-check-label" for="q2o1">
+                    Small
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" name="csize" type="checkbox" value="medium" id="q2o2">
+                    <label class="form-check-label" for="q2o2">
+                    Medium
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="large" name="csize" id="q2o3">
+                    <label class="form-check-label" for="q2o3">
+                    Large
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" name="csize" type="checkbox" value="xlarge" id="q2o4">
+                    <label class="form-check-label" for="q2o4">
+                    Extra Large
+                    </label>
+                </div>
+                <br>
+                <p>What gender are you looking for?</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="rgender" id="q3o1" value="both" required>
+                    <label class="form-check-label" for="q3o1">
+                    Both
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="rgender" id="q3o2" value="male">
+                    <label class="form-check-label" for="q3o2">
+                    Male
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="rgender" id="q3o3" value="female">
+                    <label class="form-check-label" for="q3o3">
+                    Female
+                    </label>
+                </div>
+                <br>
+            </div>
+            <div class="side2">
+                <p>What ages are you looking for?</p>
+                <div class="form-check">
+                    <input class="form-check-input" name="cage" type="checkbox" value="baby" id="q4o1">
+                    <label class="form-check-label" for="q4o1">
+                    Baby
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" name="cage" type="checkbox" value="young" id="q4o2">
+                    <label class="form-check-label" for="q4o2">
+                    Young
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" name="cage" type="checkbox" value="adult" id="q4o3">
+                    <label class="form-check-label" for="q4o3">
+                    Adult
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" name="cage" type="checkbox" value="senior" id="q4o4">
+                    <label class="form-check-label" for="q4o4">
+                    Senior
+                    </label>
+                </div>
+                <br>
+                <div id="coatqn">
+                    <p>What coat do you prefer?<br><span style="font-size: 18px;">Options will be available after you have chosen a pet type!</span></p>
+                    <br>
+                </div>
+                <p>Do you want the pet to be compatible with any of the following?</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="gwca" id="q8o1" name="cgoodWith">
+                    <label class="form-check-label" for="q8o1">
+                    Cat
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" name="cgoodWith" type="checkbox" value="gwd" id="q8o2">
+                    <label class="form-check-label" for="q8o2">
+                    Dog
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" name="cgoodWith" type="checkbox" value="gwch" id="q8o3">
+                    <label class="form-check-label" for="q8o3">
+                    Children
+                    </label>
+                </div>
+            </div>
+            <input type="submit" value="Find Pets!">
+            <form>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+        <script type="text/javascript">
+            function onPetChange() {
+                chosenPets = document.getElementsByName("rtype");
+
+                for (let i = 0; i < chosenPets.length; i++) {
+                    if (chosenPets[i].checked) {
+                        chosenPet = chosenPets[i].id;
+                    }
+                }
+
+                target = document.getElementById("coatqn");
+
+                if (chosenPet == "q1o1") {
+                    target.innerHTML = `<p>What coat do you prefer? </p>
+                    <div class="form-check">
+                        <input class="form-check-input" name="ccoat" type="checkbox" value="short" id="q5o1">
+                        <label class="form-check-label" for="q5o1">
+                        Short
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="ccoat" type="checkbox" value="medium" id="q5o2">
+                        <label class="form-check-label" for="q5o2">Medium
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="ccoat" type="checkbox" value="long" id="q5o3">
+                        <label class="form-check-label" for="q5o3">
+                        Long
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="ccoat" type="checkbox" value="wire" id="q5o4">
+                        <label class="form-check-label" for="q5o4">
+                        Wire
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="ccoat" type="checkbox" value="hairless" id="q5o5">
+                        <label class="form-check-label" for="q5o5">
+                        Hairless
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="ccoat" type="checkbox" value="curly" id="q5o6">
+                        <label class="form-check-label" for="q5o6">
+                        Curly
+                        </label>
+                    </div>
+                    <br>`;
+                } else if (chosenPet == "q1o2") {
+                    target.innerHTML = `<p>What coat do you prefer? </p>
+                    <div class="form-check">
+                        <input class="form-check-input" name="ccoat" type="checkbox" value="short" id="q5o1">
+                        <label class="form-check-label" for="q5o1">
+                        Short
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="ccoat" type="checkbox" value="medium" id="q5o2">
+                        <label class="form-check-label" for="q5o2">Medium
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="ccoat" type="checkbox" value="long" id="q5o3">
+                        <label class="form-check-label" for="q5o3">
+                        Long
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="ccoat" type="checkbox" value="hairless" id="q5o5">
+                        <label class="form-check-label" for="q5o5">
+                        Hairless
+                        </label>
+                    </div>
+                    <br>`;
+                } else if (chosenPet == "q1o3") {
+                    target.innerHTML = `<p>What coat do you prefer? </p>
+                    <div class="form-check">
+                        <input class="form-check-input" name="ccoat" type="checkbox" value="short" id="q5o1">
+                        <label class="form-check-label" for="q5o1">
+                        Short
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="ccoat" type="checkbox" value="long" id="q5o3">
+                        <label class="form-check-label" for="q5o3">
+                        Long
+                        </label>
+                    </div>
+                    <br>`;
+                }
+            }
+        </script>
+    </body>
+</html>

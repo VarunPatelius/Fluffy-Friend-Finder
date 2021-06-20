@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='store.css')}}">
+    <link rel="icon" href="{{url_for('static', filename='images/dogPrint.ico')}}">
+    <meta name="description" content="An easy way to find your lifelong companion">
+    <meta name="robots" content="index,follow">
+
+    <title>Fluffy Friend Finder | Find Your Lifelong Companion</title>
+</head>
+<body>
+    <header>
+        <div id=logo>
+            <a href="/"><img src="{{url_for('static', filename='images/mainLogoClear.png')}}" id="website-logo"></a>
+        </div>
+    </header>
+
+    <div id="map">
+        <iframe src="/map" frameborder="0"></iframe>
+    </div>
+
+    <div id="main-body">
+        <div class="column" id="main-info">
+            <h2>In order to make the pet owning experience as easy as possible, we provide a
+                map of nearby pet stores which provide a multitude of services such as:
+            </h2>
+            <ul>
+                <h3>- Grooming<br>- Pet Hotel<br>- Training<br>- Special Events</h3>
+            </ul>
+            <img src="{{url_for('static', filename='images/dogCollage.jpg')}}">
+            <h1>Together we can keeps our fluffy friends out of pounds and give them a safe home!</h1>
+        </div>
+
+        <div class="column" id="dog-tips">
+            <h1>Additional Notes</h1>
+            <h4><u>PROVIDE A PROTECTED AND CLEAN LIVING ENVIRONMENT FOR YOUR DOG</u><br>Shelter from the elements and hazards, as well as good hygiene, are basic to a quality life.</h4>     
+            <h4><u>ALWAYS KEEP FRESH WATER AVAILABLE</u><br>Maintaining optimal hydration is important for health and energy.</h4>
+            <h4><u>FEED A QUALITY DIET AND PREVENT OBESITY</u><br>Overweight humans and animals can adversely affect health in many ways. Follow the dietary recommendations that your veterinarian will make according to the nutritional needs of your dog, based on size, age, level of activity and breed. Remember to provide healthy treats rather than table scraps, as rewards.</h4>
+            <h4><u>HAVE YOUR PET EXAMINED BY A VETERINARIAN ON A REGULAR BASIS</u><br>Your veterinarian will provide you with the information on vaccination schedules, deworming and external parasite control. Keep a copy of your pet’s vaccination records in your home or with you when you travel. Contact your veterinarian if you believe that your pet may be ill, injured, or if something just doesn’t seem right. Your veterinarian is the expert on keeping your dog healthy.  Work as a team with him or her.</h4>
+            <h4><u>PROVIDE AMPLE OPPORTUNITIES TO EXERCISE</u><br>Make sure your dog gets the regular exercise needed to enable it to be fit.  By being in shape, your dog will be more capable of participating in the activities that it enjoys.</h4>
+            <h4><u>COMMUNICATE WITH YOUR DOG AND DEVELOP A RELATIONSHIP</u><br>Dogs are social creatures and they need to interact with their owner. Quality time will help you get to know your dog and understand  particular needs that it might have, as well enhance your ability to recognize early signs of an illness that could be developing. In addition, time spent in developing a relationship will help prevent many undesirable behavioral patterns. </h4>
+            <h4><u>TRAIN YOUR DOG TO FOLLOW THE SIMPLE COMMANDS</u><br>Puppy and dog training classes can be very helpful. The better your dog is at following basic and necessary commands, the greater the chances are that your dog will live a safe and long life.</h4>
+            <h4><u>PRACTICE REPRODUCTIVE CONTROL</u><br>If you do not intend to create puppies, spaying or neutering is a certain option. If you plan to breed your dog or are opposed to spaying and neutering for other reasons, take appropriate measures to prevent mismatings. Consult with your veterinarian in regard to other options that are available.</h4>
+            <h4><u>DENTAL CARE IS VERY IMPORTANT</u><br>Many breeds are prone to gum disease, which can have serious implications. Infection resulting from this condition leads to premature tooth loss, and can commonly cause infections in major organs, including the heart valves.</h4>
+            <h4><u>DON’T OVERLOOK GROOMING AND NAIL TRIMMING</u><br>Long coated dogs are prone to developing matts and ice balls in their hair. Overgrown nails are common in elderly dogs and can make it more difficult for them to walk. In addition, such nails are much more prone to breaking, which can be quite painful.</h4>
+        </div>
+    </div>
+
+</body>
+</html>

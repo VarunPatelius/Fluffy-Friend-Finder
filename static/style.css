@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+}
+
+header {
+  margin: 0;
+  background-image: linear-gradient(rgb(158, 190, 231), rgb(233, 211, 197));
+  padding-bottom: 15px;
+}
+
+#logo {
+  display: flex;
+  justify-content: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.nav-button {
+  color: white;
+  padding: 10px 25px 10px 25px;
+  border-radius: 5px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  text-decoration: none;
+}
+
+.nav-button:hover {
+  font-size: 20px;
+}
+
+#find-pet {
+  background-color: rgb(75, 211, 134);
+  margin-right: 20px;
+}
+
+#find-store {
+  background-color: rgb(55, 86, 153);
+  margin-left: 20px;
+}
+
+#main-image {
+  display: flex;
+  justify-content: center;
+}
+
+#main-body {
+  margin: 0;
+  background-image: linear-gradient(rgb(233, 211, 197), rgb(158, 190, 231));
+  padding-top: 15px;
+  justify-content: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+#main-body h2 {
+  padding-left: 150px;
+  padding-right: 150px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.video {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 25px;
+}
+
+.video iframe {
+  width: 700px;
+  height: 425px;
+}
+
+footer {
+  background: black;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+}

@@ -1,0 +1,51 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 1250px;
+  margin-bottom: 50px;
+}
+
+.card {
+  background-color: rgb(214, 229, 240);
+  border-color: rgb(99, 146, 206);
+  border-style: solid;
+  margin: 10px 10px 10px 10px;
+}
+
+.card:hover {
+  -ms-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+
+.card-body {
+  justify-content: center;
+  text-align: center;
+}
+
+.card-body img {
+  border-radius: 5px;
+}
+
+body {
+  margin: 0;
+  background-color:rgb(233, 211, 197);
+}
+
+header {
+  margin: 0;
+  background-image: linear-gradient(rgb(158, 190, 231), rgb(233, 211, 197));
+  padding-bottom: 15px;
+}
+
+#logo {
+  display: flex;
+  justify-content: center;
+}

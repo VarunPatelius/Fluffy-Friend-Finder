@@ -1,0 +1,13 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background: url("img/home_page_pet_image.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+.requestLocation{
+  text-align: right;
+}

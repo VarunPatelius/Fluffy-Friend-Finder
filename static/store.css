@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+}
+
+header {
+  margin: 0;
+  background-image: linear-gradient(rgb(158, 190, 231), rgb(233, 211, 197));
+  padding-bottom: 15px;
+}
+
+#logo {
+  display: flex;
+  justify-content: center;
+}
+
+#map {
+  display: flex;
+  justify-content: center;
+}
+
+#map iframe {
+  width: 100%;
+  height: 600px;
+}
+
+#main-body {
+  display: flex;
+  background-image: linear-gradient(rgb(233, 211, 197), rgb(158, 190, 231));
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.column {
+  flex: 50%;
+  justify-content: center;
+  text-align: center;
+}
